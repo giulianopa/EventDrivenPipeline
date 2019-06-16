@@ -1,4 +1,4 @@
-#EventDrivenPipeline
+# EventDrivenPipeline
 
 This code was written long time ago in my spare time, and never had the chance to use. I am putting it on Github just to have a backup. Maybe one day I will add better documentation and I will finish it.
 I wanted to design a new framework for a processing pipeline (i.e., a graph of connected modules, each one with its own input and output), and I wanted to avoid the constraint of having to explicitly declare the topology. I wanted the (optimal) topology to be determined only by the modules input, at run-time. I wanted also to reuse the modules output, without using a "cache".
