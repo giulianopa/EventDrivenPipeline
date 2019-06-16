@@ -41,18 +41,18 @@ private:
 
 	//! Convert the std::tuple back to a variadic list of args and emit the joint event.
 	template<int ...Seq>
-	void unpackAndEmit(const viper::mpl::seq<Seq...>&) {
+	void unpackAndEmit(const utils::mpl::seq<Seq...>&) {
 		emit(std::move(std::get<Seq>(m_msgData))...);
 	}
 
-	//! For each event occurred, evaluate if to emit the joint event or not. 
+	//! For each event occurred, evaluate if to emit the joint event or not.
 	void evalAndEmit()
 	{
 		std::lock_guard<std::mutex> guard(m_evaluationMutex);
 		if (m_notified.all())
 		{
 			// "Unpack" tuple
-			const viper::mpl::gen_seq<sizeof...(OtherMsgType)+1> msgSeq;
+			const utils::mpl::gen_seq<sizeof...(OtherMsgType)+1> msgSeq;
 			unpackAndEmit(msgSeq);
 			m_notified.reset();
 		}

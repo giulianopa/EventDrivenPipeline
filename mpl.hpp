@@ -15,7 +15,7 @@
 /*!
 	\author Giuliano Pasqualotto
 */
-namespace viper
+namespace utils
 {
 	namespace mpl
 	{

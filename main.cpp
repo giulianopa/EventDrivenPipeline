@@ -13,7 +13,7 @@ int main()
 	EventSource<vector<string>> vecStrSrc;
 	EventSource<string> strSrc;
 
-	// PS: Creational pattern to be reviewd.
+	// PS: Creational pattern to be reviewed.
 	std::shared_ptr<ConcreteModuleType1> module1 = ConcreteModuleType1::create(TYPE_1_IMPLEMENTATION_1);
 	std::shared_ptr<ConcreteModuleType2> module2 = ConcreteModuleType2::create(TYPE_2_IMPLEMENTATION_1);
 
